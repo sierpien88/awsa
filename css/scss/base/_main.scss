@@ -1,0 +1,74 @@
+@use '../abstracts/index' as *;
+:root {
+    scrollbar-color: $blue $white;
+    scrollbar-width: thin;
+    @media(max-width: 1400px) {
+        font-size: 50%;
+    }
+    @media(min-width: 1921px) {
+        font-size: 0.55vw;
+    }
+}
+
+body {
+    overflow: unset;
+    overflow: overlay;
+    font-family: 'Metropolis', sans-serif;
+    font-size: 1.8rem;
+    font-weight: 100;
+    color: $white;
+    transition: background-color 1s 0.3s ease-in-out;
+    &::-webkit-scrollbar {
+        background-color: transparent;
+        width: 5px;
+    }
+    &::-webkit-scrollbar-thumb {
+        box-sizing: padding-box;
+        background-color: rgba($white, 1);
+        background-clip: padding-box;
+        border: 1px solid rgba($blue, 1);
+    }
+    &::-webkit-scrollbar-track {
+        background-color: rgba(0, 0, 0, 0);
+    }
+    &.hidden-scrollbar {
+        &::-webkit-scrollbar-thumb {
+            background-color: rgba($blue, 0);
+            border: 3px solid rgba($white, 0);
+        }
+    }
+}
+
+.mainContent {
+    position: relative;
+}
+
+.stripes {
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    .stripe-1 {
+        height: 100%;
+        // width: 0.5rem;
+        display: inline-block;
+    }
+    .stripe-2 {
+        height: 100%;
+        // width: 0.5rem;
+        display: inline-block;
+    }
+    .stripe-3 {
+        height: 100%;
+        // width: 0.5rem;
+        display: inline-block;
+    }
+}
+
+*::selection {
+    color: $white;
+    background: darken($green, 10%);
+    text-shadow: 0 0 2px #ffffff99;
+}

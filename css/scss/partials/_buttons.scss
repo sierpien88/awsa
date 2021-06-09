@@ -1,0 +1,83 @@
+@use '../abstracts/index' as *;
+.button {
+    display: inline-block;
+    position: relative;
+    padding: 1em 2.2em;
+    background: $white;
+    color: $blue;
+    font-weight: 700;
+    z-index: 0;
+    overflow: hidden;
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 150%;
+        height: 100%;
+        background: $green;
+        z-index: -1;
+        transform-origin: left bottom;
+        transform: translateX(100%) skewX(-35deg);
+        transition: all 0.5s ease;
+    }
+    &:hover {
+        color: $white;
+        &::after {
+            transform: translateX(0) skewX(-35deg);
+            transition: all 0.5s ease;
+        }
+    }
+}
+
+.buttonBack {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateX(-200%);
+    img {
+        width: 15px;
+    }
+    @media(max-width: 1199px){
+        &::before{
+            display: none;
+        }
+        &::after{
+            display: none;
+        }
+    }
+    &::before {
+        content: url(../assets/img/highway-white.svg);
+        position: absolute;
+        top: 18px;
+        left: -35px;
+        transform: translate(0, -50%);
+        pointer-events: none;
+        opacity: 0;
+        transition: transform 0.3s ease, opacity 0.3s 0.3s ease;
+    }
+    &::after {
+        content: '';
+        position: absolute;
+        top: 15px;
+        left: -35px;
+        transform: translate(calc(-100% + 27px), -50%) scaleX(0);
+        width: 75px;
+        height: 4px;
+        background: $green;
+        pointer-events: none;
+        transform-origin: right center;
+        transition: all 0.3s ease;
+    }
+    &:hover {
+        &::before {
+            transform: translate(-80px, -50%);
+            opacity: 1;
+            transition: opacity 1s ease, transform 0.5s 0.3s ease;
+        }
+        &::after {
+            transform: translate(calc(-100% + 27px), -50%) scaleX(1);
+            transition: transform 0.5s 0.3s ease;
+        }
+    }
+}

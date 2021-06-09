@@ -1,0 +1,138 @@
+@use '../abstracts/index' as *;
+.textImage {
+    position: relative;
+    &__text {
+        padding: 0 8rem 0 4rem;
+        @media(min-width: 768px) {
+            margin-left: 4rem;
+        }
+        @media(max-width: 1199px) {
+            padding-right: 4rem;
+        }
+        &::after {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 0.5rem;
+            height: 15rem;
+            background: $white;
+        }
+        &-smallCaption {
+            display: block;
+            font-weight: 700;
+            font-size: 2.2rem;
+            padding-top: 6rem;
+            margin-bottom: 1rem;
+        }
+        &-bigCaption {
+            font-weight: 800;
+            font-size: 3.6rem;
+            margin-bottom: 2rem;
+        }
+        &-description {
+            margin-bottom: 2rem;
+        }
+        &.reversed {
+            padding: 0 4rem 0 8rem;
+            &::after {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: unset;
+                right: 0;
+                width: 0.5rem;
+                height: 15rem;
+                background: $green;
+            }
+        }
+    }
+}
+
+.quote {
+    &:hover {
+        .quote__wrapper {
+            opacity: 0;
+            transition: all 0.5s ease;
+            &:nth-child(1) {
+                opacity: 1;
+                transform: translateX(0);
+                transition: all 0.5s ease;
+            }
+        }
+    }
+    &__wrapper {
+        position: relative;
+        opacity: 1;
+        transition: all 0.5s ease;
+        &:nth-child(1) {
+            position: absolute;
+            top: 0;
+            right: 0;
+            opacity: 0;
+            transform: translateX(-100px);
+            transition: all 0.5s ease;
+        }
+    }
+    &__text {
+        color: $white;
+        font-size: 6rem;
+        font-weight: 900;
+        text-align: right;
+        @media(max-width: 991px) {
+            font-size: 4.5vw;
+        }
+    }
+    &__author {
+        font-size: 2.2rem;
+        font-weight: 700;
+        text-align: right;
+        @media(max-width: 991px) {
+            font-size: 3.4vw;
+        }
+    }
+    &__under {
+        font-size: 2.2rem;
+        text-align: right;
+        @media(max-width: 991px) {
+            font-size: 2vw;
+        }
+    }
+}
+
+.onlyText {
+    &__header {
+        font-size: 3.2rem;
+        font-weight: 900;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    &__paragraph {
+        margin-bottom: 2rem;
+        text-align: center;
+    }
+}
+
+.textImageBkg {
+    &__text {
+        padding-left: 4rem;
+        &-header {
+            font-size: 3.2rem;
+            font-weight: 900;
+            margin-bottom: 2rem;
+        }
+        &-paragraph {
+            margin-bottom: 2rem;
+        }
+    }
+}
+
+.list {
+    .list__item {
+        background: url("../assets/img/list-item.svg") no-repeat left center;
+        padding: 2rem 1.5rem 2rem 75px;
+        list-style: none;
+        margin: 0;
+        vertical-align: middle;
+    }
+}

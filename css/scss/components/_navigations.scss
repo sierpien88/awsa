@@ -1,0 +1,14 @@
+@use '../abstracts/index' as *;
+.navigation {
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    padding: 15px 0;
+    background: $white;
+    z-index: 1000;
+    box-shadow: 0 0 1rem rgba(darken($blue, 20%), 0.2);
+    &__logo {
+        position: relative;
+    }
+}
