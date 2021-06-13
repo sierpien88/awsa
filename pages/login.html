@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWSA</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon32.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="../assets/img/favicon64.png">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body id="login">
+    <nav class="container-fluid navigation">
+        <div class="row g-0">
+            <a href="index.html" class="navigation__logo">
+                <img src="../assets/img/logo-color.svg" alt="AWSA logo" loading="eager">
+            </a>
+        </div>
+    </nav>
+    <section class="login">
+        <div class="form__wrapper">
+            <div class="form">
+                <div class="form__header">
+                    <a href="/awsa" class="login__back">
+                        <img src="../assets/img/arrow-left.png" alt="icon">
+                    </a>
+                    <h2>Zaloguj się</h2>
+                </div>
+                <form class="login__form" action="" method="">
+                    <div class="login__form-element">
+                        <label for="fname"></label>
+                        <input class="custom__input custom__input--login-with-icon" placeholder="Login" type="text" id="fname" name="fname" style="background-image: url('../assets/img/mail-icon.png')">
+                    </div>
+                    <div class="login__form-element">
+                        <label for="password"></label>
+                        <input class="custom__input custom__input--login-with-icon" placeholder="Hasło" type="password" id="password" name="password" style="background-image: url('../assets/img/password.svg')">
+                    </div>
+                    <div class="login__form-element login__form-element--multi-space-between">
+                        <div class="checkbox-wrapper">
+                            <input type="checkbox" id="remember" name="remember">
+                            <label for="remember">Zapamiętaj mnie</label>
+                        </div>
+                        <a href="#" class="forget-password">
+                            Zapomniałeś hasła?
+                        </a>
+                    </div>
+                    <div class="login__form-element login__form-element--center">
+                        <a class="button button--blue-login" type="submit" value="Submit">Zaloguj się</a>
+                    </div>
+                </form>
+                <div class="form__footer">
+                    <p>Nie masz jeszcze konta?</p>
+                    <a class="button button--blue-border" type="submit" value="Submit">Zaloguj się</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>

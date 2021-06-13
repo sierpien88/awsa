@@ -1,0 +1,42 @@
+.custom__input {
+    padding: 22px;
+    font-size: 16px;
+    border: 2px solid #D5DEE2;
+    background-color: #F1F4F5;
+    color: #262C2F;
+    margin-bottom: 10px;
+
+    &--login-with-icon {
+        background-position: 95% 20px;
+        background-repeat: no-repeat;
+    }
+
+    &::placeholder {
+        color: #94AAB4;
+    }
+}
+
+.card {
+    border: none;
+    border-radius: 0;
+    .card-body {
+        padding: 0px 50px 42px 50px;
+        height: 245px;
+        position: relative;
+
+        .card-title {
+            text-align: center;
+            font-size: 25px;
+            font-weight: 800;
+            color: #262C2F;
+            margin: 50px 0;
+        }
+
+        .button {
+            position: absolute;
+            left: 0;
+            right: 0;
+            bottom: 40px;
+        }
+    }
+}

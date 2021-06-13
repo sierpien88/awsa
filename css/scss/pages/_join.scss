@@ -1,0 +1,31 @@
+#join {
+    padding-top: 240px;
+    background: #005C9E;
+    color: #262C2F;
+    font-family: "Metropolis", sans-serif;
+    padding-bottom: 90px;
+
+    .cards__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .title-with-back{
+        margin-bottom: 100px;
+
+        a {
+            display: flex;
+            justify-content: space-between;
+            max-width: 405px;
+            align-items: center;
+            width: 100%;
+            font-size: 25px;
+            font-weight: 800;
+            text-align: center;
+            color: $white;
+            text-decoration: none;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}

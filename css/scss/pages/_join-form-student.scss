@@ -1,0 +1,133 @@
+#join-student {
+    padding-top: 240px;
+    background: #005C9E;
+    color: #262C2F;
+    font-family: "Metropolis", sans-serif;
+    padding-bottom: 90px;
+
+    .join-student {
+
+        .title-with-back {
+            display: flex;
+            align-items: center;
+            // justify-content: space-between;
+            color: $white;
+            max-width: 655px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 60px;
+
+            h2 {
+                width: 100%;
+                font-size: 25px;
+                font-weight: 800;
+                text-align: center;
+            }
+        }
+
+        .form__wrapper {
+            max-width: 915px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: #ffffff;
+            padding-top: 85px;
+
+            .form {
+                width: 50%;
+                position: relative;
+        
+                .login__form {
+                    display: flex;
+                    flex-direction: column;
+                    width: 100%;
+                    border-bottom: 2px solid #D5DEE2;
+                    padding-bottom: 35px;
+
+                    .form-subtitle {
+                        display: flex;
+                        align-items: center;
+                        width: 140%;
+                        margin-left: -20%;
+                        margin-top: 30px;
+                        margin-bottom: 10px;
+
+                        .line {
+                            flex-grow: 1;
+                            height: 2px;
+                            background: #D5DEE2;
+                        }
+
+                        .form-title {
+                            font-size: 20px;
+                            font-weight: 800;
+                            margin: 0 15px;
+                        }
+
+                        &:nth-child(1) {
+                            margin-top: 0;
+                        }
+                    }
+                    
+                    .login__form-element {
+                        width: 100%;
+
+                        input {
+                            width: 100%;
+                        }
+
+                        .checkbox-wrapper {
+                            display: flex;
+                            align-items: center;
+
+                            input {
+                                width: initial;
+                                margin-right: 10px;
+                            }
+
+                            label {
+                                font-weight: normal;
+                            }
+                        }
+
+                        .forget-password {
+                            display: block;
+                            font-size: 14px;
+                            color: #262C2F;
+                            font-weight: bold;
+                            text-decoration: underline;
+                        }
+
+                        &--center {
+                            text-align: center;
+                        }
+
+                        &--multi-space-between {
+                            display: flex;
+                            justify-content: space-between;
+
+                            .address-wrapper {
+                                flex-grow: 1;
+                            }
+
+                            .postcode-wrapper {
+                                width: 140px;
+                                margin-left: 15px;
+                            }
+                        }
+                    }
+                }
+
+                .form__footer {
+                    margin: 50px 0;
+                    
+                    label {
+                        font-size: 10px;
+                        // font-weight: 300;
+                    }
+                }
+            }
+        }
+    }
+}

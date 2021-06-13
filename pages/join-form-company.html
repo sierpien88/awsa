@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWSA</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="../assets/img/favicon16.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="../assets/img/favicon32.png">
+    <link rel="icon" type="image/png" sizes="64x64" href="../assets/img/favicon64.png">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/multistep-form.css">
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+</head>
+<body id="join-student">
+    <nav class="container-fluid navigation">
+        <div class="row g-0">
+            <a href="index.html" class="navigation__logo">
+                <img src="../assets/img/logo-color.svg" alt="AWSA logo" loading="eager">
+            </a>
+        </div>
+    </nav>
+    <section class="join-student container">
+        <ul id="progressbar">
+            <li class="active" id="account"><strong></strong></li>
+            <li id="personal"><strong></strong></li>
+            <li id="payment"><strong></strong></li>
+            <li id="confirm"><strong></strong></li>
+        </ul>
+        <div class="title-with-back">
+            <a href="/awsa" class="login__back">
+                <img src="../assets/img/arrow-left-white.png" alt="icon">
+            </a>
+            <h2>Witaj kursancie</h2>
+        </div>
+        <div class="form__wrapper">
+            <div class="form">
+                <form id="multistep-form" class="login__form" action="" method="">
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="form-subtitle">
+                                <div class="line"></div>
+                                <h3 class="form-title">Dane personalne</h3>
+                                <div class="line"></div>
+                            </div>
+                            <div class="login__form-element">
+                                <label for="fname"></label>
+                                <input class="custom__input custom__input--login-with-icon" placeholder="Imię" type="text" id="fname" name="fname">
+                            </div>
+                            <div class="login__form-element">
+                                <label for="sname"></label>
+                                <input class="custom__input custom__input--login-with-icon" placeholder="Nazwisko" type="text" id="sname" name="sname">
+                            </div>
+                            <div class="login__form-element login__form-element--multi-space-between">
+                                <div class="address-wrapper">
+                                    <label for="address"></label>
+                                    <input class="custom__input custom__input--login-with-icon" placeholder="Ulica, numer" type="text" id="address" name="address" >
+                                </div>
+                                <div class="postcode-wrapper">
+                                    <label for="fname"></label>
+                                    <input class="custom__input custom__input--login-with-icon" placeholder="Kod" type="text" id="fname" name="fname">
+                                </div>
+                            </div>
+                            <div class="login__form-element">
+                                <label for="city"></label>
+                                <input class="custom__input custom__input--login-with-icon" placeholder="Miejscowość" type="text" id="city" name="city">
+                            </div>
+                            <div class="login__form-element">
+                                <label for="number"></label>
+                                <input class="custom__input custom__input--login-with-icon" placeholder="Telefon" type="number" id="number" name="number">
+                            </div>
+                        </div> 
+                        <input type="button" name="next" class="next action-button" value="Dalej" />
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="form-subtitle">
+                                <div class="line"></div>
+                                <h3 class="form-title">Dane logowania</h3>
+                                <div class="line"></div>
+                            </div>
+                            <div class="login__form-element">
+                                <label for="email"></label>
+                                <input class="custom__input custom__input--login-with-icon" placeholder="Email" type="email" id="email" name="email" style="background-image: url('../assets/img/password.svg')">
+                            </div>
+                            <div class="login__form-element">
+                                <label for="password"></label>
+                                <input class="custom__input custom__input--login-with-icon" placeholder="Hasło" type="password" id="password" name="password" style="background-image: url('../assets/img/password.svg')">
+                            </div>
+                            <div class="login__form-element">
+                                <label for="password"></label>
+                                <input class="custom__input custom__input--login-with-icon" placeholder="Powtórz Hasło" type="password" id="password" name="password" style="background-image: url('../assets/img/password.svg')">
+                            </div>
+                        </div> 
+                        <input type="button" name="previous" class="previous action-button-previous" value="Wróć" />
+                        <input type="button" name="next" class="next action-button" value="Dalej" />
+                    </fieldset>
+                    <fieldset>
+                        <div class="form-card">
+                            <div class="form-subtitle">
+                                <div class="line"></div>
+                                <h3 class="form-title">Nazwa ośrodka</h3>
+                                <div class="line"></div>
+                            </div>
+                            <div class="login__form-element">
+                                <label for="school-city"></label>
+                                <input class="custom__input custom__input--login-with-icon" placeholder="Miejscowość" type="text" id="school-city" name="school-city" >
+                            </div>
+                            <div class="login__form-element">
+                                <label for="school-name"></label>
+                                <input class="custom__input custom__input--login-with-icon" placeholder="Nazwa Ośrodka" type="text" id="school-name" name="school-name" >
+                            </div>
+                        </div>
+                        <input type="button" name="previous" class="previous action-button-previous" value="Wróć" />
+                        <input type="button" name="next" class="next action-button" value="Dalej" />
+                    </fieldset>
+                    <div class="form-subtitle">
+                        <div class="line"></div>
+                    </div>
+                    <div class="form__footer">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="accept-radio" id="accept-radio">
+                            <label class="form-check-label" for="accept-radio">
+                              Lorem ipsum dolor sit amet consectetur adipisicing elit. Nulla quam pariatur eum aliquid facere, mollitia facilis culpa, libero perferendis quos, dolores alias ab cum dolorem aliquam neque. Velit, dignissimos sunt!
+                            </label>
+                          </div>
+                    </div>
+                    <div class="login__form-element login__form-element--center">
+                        <a class="button button--green" type="submit" value="Submit">Zaloguj się</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="../js/multistep-form.js"></script>
+</body>
+</html>

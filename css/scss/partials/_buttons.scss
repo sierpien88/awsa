@@ -28,6 +28,59 @@
             transition: all 0.5s ease;
         }
     }
+
+    &--blue-login {
+        background: $blue;
+        color: $white;
+        text-align: center;
+        font-size: 16px;
+        width: 245px;
+        margin-left: auto;
+        margin-right: auto;
+
+        a {
+            text-align: center;
+        }
+    }
+
+    &--blue-light {
+        background: $blue-light;
+        color: $white;
+        text-align: center;
+        font-size: 16px;
+        width: 245px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &--green {
+        background: $green;
+        color: $white;
+        text-align: center;
+        font-size: 16px;
+        width: 245px;
+        margin-left: auto;
+        margin-right: auto;
+
+        &::after {
+            background: $blue;
+        }
+    }
+
+    &--blue-border {
+        background: $white;
+        border: 2px solid $blue;
+        color: $blue;
+        font-size: 16px;
+        width: 245px;
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+
+        &::after {
+            background: $blue;
+        }
+    }
 }
 
 .buttonBack {
